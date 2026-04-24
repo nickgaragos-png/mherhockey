@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hockey Team Rater</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel rating-panel" aria-labelledby="app-title">
+        <div class="rink-art" aria-hidden="true">
+          <div class="rink-line center-line"></div>
+          <div class="rink-circle left-circle"></div>
+          <div class="rink-circle right-circle"></div>
+          <div class="puck"></div>
+          <div class="stick stick-left"></div>
+          <div class="stick stick-right"></div>
+        </div>
+
+        <div class="content">
+          <p class="eyebrow">Completely biased hockey analytics</p>
+          <h1 id="app-title">Hockey Team Rater</h1>
+          <p class="intro">
+            Enter any hockey team and receive a totally scientific rating.
+          </p>
+
+          <form id="team-form" class="team-form">
+            <label for="team-input">Team name</label>
+            <div class="input-row">
+              <input
+                id="team-input"
+                name="team"
+                type="text"
+                autocomplete="off"
+                placeholder="Try: LA Kings"
+                required
+              >
+              <button type="submit">Rate</button>
+            </div>
+          </form>
+
+          <section id="result" class="result is-waiting" aria-live="polite">
+            <div class="score-card">
+              <span id="score" class="score">--</span>
+              <span class="score-label">team rating</span>
+            </div>
+            <div>
+              <h2 id="result-title">Awaiting a team</h2>
+              <p id="result-copy">The rating computer is sharpening its skates.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
